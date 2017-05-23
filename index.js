@@ -4,7 +4,7 @@ var readline = require('readline');
 
 require('yargs')
 	.usage('$0 <cmd> [args]')
-	.command('pokemon [pokemon]', 'and then you choose your pokemon number', {
+	.command('pokemon', 'and then you choose your pokemon number', {
 		pokemon: {
 			default: 'default'
 		}
