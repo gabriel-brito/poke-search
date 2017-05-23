@@ -32,3 +32,5 @@ It will apear every detail of the selected pokemon on your console!
 <p align="center">
 	<img src="/github/ash.png" alt="Ash Ketchum"> 
 </p>
+
+Now you're *gonna catch 'em all*!!
