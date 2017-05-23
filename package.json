@@ -1,0 +1,15 @@
+{
+  "name": "entria-job",
+  "version": "1.0.0",
+  "description": "Intership job challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Santos",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^1.7.0",
+    "yargs": "^8.0.1"
+  }
+}
