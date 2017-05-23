@@ -4,11 +4,20 @@ var readline = require('readline');
 
 require('yargs')
 	.usage('$0 <cmd> [args]')
-	.command('pokemon', 'and then you choose your pokemon number', {
+	.command('pokemon [name]', 'and then you put your pokemon name or number', {
 		pokemon: {
-			default: 'default'
+			name: 'bulbasaur'
 		}
-	}, function(){
+	}, function(argv){
+		if(argv){
+			fetch('https://pokeapi.co/api/v2/pokemon/' + argv.name)
+				.then(function(response){
+					return response.json();
+				})
+				.then(function(json){
+					console.log(json);
+				});
+		} else{
 		var userChoise = readline.createInterface({
 			input: process.stdin,
 			output: process.stdout
@@ -22,7 +31,7 @@ require('yargs')
 					console.log(json);
 				});
 		userChoise.close();
-		})
+		})}
 	})
 	.help()
 	.argv
