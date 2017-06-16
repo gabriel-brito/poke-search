@@ -1,6 +1,6 @@
 {
   "name": "entria-job",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Intership job challenge",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,8 @@
   "dependencies": {
     "node-fetch": "^1.7.0",
     "yargs": "^8.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.0.0"
   }
 }
