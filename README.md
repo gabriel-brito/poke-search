@@ -21,7 +21,13 @@ cd poke-search
 npm i
 ```
 
-Ok! Now you're ready to register every pokemon on your pokedex with this command:
+Ok! Now you're ready to register every pokemon on your pokedex with:
+
+```
+node index.js pokemon
+```
+
+Or with the directly command:
 
 ```
 node index.js pokemon [pokemon_name] - or - node index.js pokemon [1..151]
