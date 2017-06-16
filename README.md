@@ -33,7 +33,7 @@ Or with the directly command:
 node index.js pokemon [pokemon_name] - or - node index.js pokemon [1..151]
 ```
 
-It will apear every detail of the selected pokemon on your console!
+It will apear every necessary detail of the selected pokemon on your console!
 
 <p align="center">
 	<img src="/github/ash.png" alt="Ash Ketchum">
