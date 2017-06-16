@@ -40,3 +40,5 @@ It will apear every detail of the selected pokemon on your console!
 	<br>
 	Now you're *gonna catch 'em all*!!
 </p>
+
+observations: ESlint and Prettier has been added to the code!
