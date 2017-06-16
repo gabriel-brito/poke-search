@@ -1,6 +1,6 @@
 {
   "name": "entria-job",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Intership job challenge",
   "main": "index.js",
   "scripts": {

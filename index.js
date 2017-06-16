@@ -9,26 +9,32 @@ require('yargs')
 			name: 'bulbasaur'
 		}
 	}, function(argv){
-		if(argv){
+		if(argv.name){
 			fetch('https://pokeapi.co/api/v2/pokemon/' + argv.name)
-				.then(function(response){
-					return response.json();
-				})
-				.then(function(json){
-					console.log(json);
-				});
-		} else{
+			.then(function(response){
+				return response.json();
+			})
+			.then(function(json){
+				console.log('pokemon id: ' + json.id);
+				console.log('pokemon name: ' + json.name);
+				console.log('pokemon weight: ' + json.weight + 'kg');
+				console.log('pokemon height: ' + json.height);
+			});
+		} else {
 		var userChoise = readline.createInterface({
 			input: process.stdin,
 			output: process.stdout
 		});
-		userChoise.question('What is the number of your pokemon?', (answer) => {
+		userChoise.question('What is the number or name of your pokemon?', (answer) => {
 			fetch('https://pokeapi.co/api/v2/pokemon/' + answer)
 				.then(function(response){
 					return response.json();
 				})
 				.then(function(json){
-					console.log(json);
+					console.log('pokemon id: ' + json.id);
+					console.log('pokemon name: ' + json.name);
+					console.log('pokemon weight: ' + json.weight + 'kg');
+					console.log('pokemon height: ' + json.height);
 				});
 		userChoise.close();
 		})}
