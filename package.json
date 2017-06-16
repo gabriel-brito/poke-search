@@ -1,6 +1,6 @@
 {
   "name": "PokeSearch",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Intership job challenge",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,9 @@
     "yargs": "^8.0.1"
   },
   "devDependencies": {
-    "eslint": "^4.0.0"
+    "eslint": "^4.0.0",
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.1",
+    "prettier": "^1.4.4"
   }
 }
