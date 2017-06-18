@@ -6,6 +6,14 @@ how many times you saw a pokemon and you couldn't register him? Now you'll not h
 	<img src="/github/pokedex.png" alt="Pokedex">
 </p>
 
+## What have been used until now:
+
++Yargs
++ECMA Script
++Prettier
++ESlint
++Lint-Staged
+
 ## how to use the Pokedex?
 
 First of all, you need to clone this repo with:
@@ -40,5 +48,3 @@ It will apear every necessary detail of the selected pokemon on your console!
 	<br>
 	Now you're *gonna catch 'em all*!!
 </p>
-
-observations: ESlint and Prettier has been added to the code!
