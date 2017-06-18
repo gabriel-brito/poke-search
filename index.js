@@ -28,7 +28,7 @@ require("yargs")
 					output: process.stdout
 				});
 				userChoise.question(
-					"What is the number or name of your pokemon?",
+					"What is the number or name of your pokemon? \n",
 					answer => {
 						fetch("https://pokeapi.co/api/v2/pokemon/" + answer)
 							.then(function(response) {
