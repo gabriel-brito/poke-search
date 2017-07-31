@@ -17,12 +17,16 @@ require("yargs")
 						.then(data => {
 							return data.json();
 						})
-						.then(data => {
+						.then((data, err) => {
 							var { id, name, weight, height } = data;
-							console.log(`pokemon id: ${id}`);
-							console.log(`pokemon name: ${name}`);
-							console.log(`pokemon weight: ${weight} kg`);
-							console.log(`pokemon height: ${height}`);
+							if (typeof id == "undefined") {
+								console.log(`pokemon's name is wrong`);
+							} else {
+								console.log(`pokemon id: ${id}`);
+								console.log(`pokemon name: ${name}`);
+								console.log(`pokemon weight: ${weight} kg`);
+								console.log(`pokemon height: ${height}`);
+							}
 						})
 						.catch(err => {
 							console.log("Something went wrong");
@@ -40,12 +44,16 @@ require("yargs")
 							.then(data => {
 								return data.json();
 							})
-							.then(data => {
+							.then((data, err) => {
 								var { id, name, weight, height } = data;
-								console.log(`pokemon id: ${id}`);
-								console.log(`pokemon name: ${name}`);
-								console.log(`pokemon weight: ${weight} kg`);
-								console.log(`pokemon height: ${height}`);
+								if (typeof id == "undefined") {
+									console.log(`pokemon's name is wrong`);
+								} else {
+									console.log(`pokemon id: ${id}`);
+									console.log(`pokemon name: ${name}`);
+									console.log(`pokemon weight: ${weight} kg`);
+									console.log(`pokemon height: ${height}`);
+								}
 							})
 							.catch(err => {
 								console.log("Something went wrong");
