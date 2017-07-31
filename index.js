@@ -10,18 +10,23 @@ require("yargs")
 		{
 			pokemon: { name: "bulbasaur" }
 		},
-		function(argv) {
+		argv => {
 			if (argv.name) {
-				fetch("https://pokeapi.co/api/v2/pokemon/" + argv.name)
-					.then(function(response) {
-						return response.json();
-					})
-					.then(function(json) {
-						console.log("pokemon id: " + json.id);
-						console.log("pokemon name: " + json.name);
-						console.log("pokemon weight: " + json.weight + "kg");
-						console.log("pokemon height: " + json.height);
-					});
+				setTimeout(() => {
+					fetch("https://pokeapi.co/api/v2/pokemon/" + argv.name)
+						.then(data => {
+							return data.json();
+						})
+						.then(data => {
+							console.log(`pokemon id: ${data.id}`);
+							console.log(`pokemon name: ${data.name}`);
+							console.log(`pokemon weight: ${data.weight} kg`);
+							console.log(`pokemon height: ${data.height}`);
+						})
+						.catch(err => {
+							console.log("Something went wrong");
+						});
+				}, 100);
 			} else {
 				var userChoise = readline.createInterface({
 					input: process.stdin,
@@ -31,16 +36,19 @@ require("yargs")
 					"What is the number or name of your pokemon? \n",
 					answer => {
 						fetch("https://pokeapi.co/api/v2/pokemon/" + answer)
-							.then(function(response) {
-								return response.json();
+							.then(data => {
+								return data.json();
 							})
-							.then(function(json) {
-								console.log("pokemon id: " + json.id);
-								console.log("pokemon name: " + json.name);
+							.then(data => {
+								console.log(`pokemon id: ${data.id}`);
+								console.log(`pokemon name: ${data.name}`);
 								console.log(
-									"pokemon weight: " + json.weight + "kg"
+									`pokemon weight: ${data.weight} kg`
 								);
-								console.log("pokemon height: " + json.height);
+								console.log(`pokemon height: ${data.height}`);
+							})
+							.catch(err => {
+								console.log("Something went wrong");
 							});
 						userChoise.close();
 					}
