@@ -18,7 +18,7 @@ require("yargs")
 							return data.json();
 						})
 						.then(data => {
-							var {id, name, weight, height} = data;
+							var { id, name, weight, height } = data;
 							console.log(`pokemon id: ${id}`);
 							console.log(`pokemon name: ${name}`);
 							console.log(`pokemon weight: ${weight} kg`);
@@ -41,12 +41,10 @@ require("yargs")
 								return data.json();
 							})
 							.then(data => {
-								var {id, name, weight, height} = data;
+								var { id, name, weight, height } = data;
 								console.log(`pokemon id: ${id}`);
 								console.log(`pokemon name: ${name}`);
-								console.log(
-									`pokemon weight: ${weight} kg`
-								);
+								console.log(`pokemon weight: ${weight} kg`);
 								console.log(`pokemon height: ${height}`);
 							})
 							.catch(err => {
