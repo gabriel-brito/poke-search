@@ -14,13 +14,13 @@ require("yargs")
 			if (argv.name) {
 				setTimeout(() => {
 					fetch("https://pokeapi.co/api/v2/pokemon/" + argv.name)
-						.then(data => {
-							return data.json();
-						})
+						.then(data => data.json())
 						.then((data, err) => {
 							var { id, name, weight, height } = data;
 							if (typeof id == "undefined") {
-								console.log(`pokemon's name is wrong`);
+								console.log(
+									`pokemon's name or number is wrong`
+								);
 							} else {
 								console.log(`pokemon id: ${id}`);
 								console.log(`pokemon name: ${name}`);
@@ -41,13 +41,13 @@ require("yargs")
 					"What is the number or name of your pokemon? \n",
 					answer => {
 						fetch("https://pokeapi.co/api/v2/pokemon/" + answer)
-							.then(data => {
-								return data.json();
-							})
+							.then(data => data.json())
 							.then((data, err) => {
 								var { id, name, weight, height } = data;
 								if (typeof id == "undefined") {
-									console.log(`pokemon's name is wrong`);
+									console.log(
+										`pokemon's name or number is wrong`
+									);
 								} else {
 									console.log(`pokemon id: ${id}`);
 									console.log(`pokemon name: ${name}`);
