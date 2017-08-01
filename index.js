@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-var fetch = require("node-fetch");
-var readline = require("readline");
+let fetch = require("node-fetch");
+let readline = require("readline");
 
 require("yargs")
 	.usage("$0 <cmd> [args]")
@@ -16,7 +16,7 @@ require("yargs")
 					fetch("https://pokeapi.co/api/v2/pokemon/" + argv.name)
 						.then(data => data.json())
 						.then((data, err) => {
-							var { id, name, weight, height } = data;
+							let { id, name, weight, height } = data;
 							if (typeof id == "undefined") {
 								console.log(
 									`pokemon's name or number is wrong`
@@ -43,7 +43,7 @@ require("yargs")
 						fetch("https://pokeapi.co/api/v2/pokemon/" + answer)
 							.then(data => data.json())
 							.then((data, err) => {
-								var { id, name, weight, height } = data;
+								let { id, name, weight, height } = data;
 								if (typeof id == "undefined") {
 									console.log(
 										`pokemon's name or number is wrong`
