@@ -40,7 +40,8 @@ require("yargs")
 				userChoise.question(
 					"What is the number or name of your pokemon? \n",
 					answer => {
-						fetch("https://pokeapi.co/api/v2/pokemon/" + answer)
+						let answerLower = answer.toLowerCase()
+						fetch("https://pokeapi.co/api/v2/pokemon/" + answerLower)						
 							.then(data => data.json())
 							.then((data, err) => {
 								let { id, name, weight, height } = data;
