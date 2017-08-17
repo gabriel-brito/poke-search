@@ -13,7 +13,8 @@ require("yargs")
 		argv => {
 			if (argv.name) {
 				setTimeout(() => {
-					fetch("https://pokeapi.co/api/v2/pokemon/" + argv.name)
+					let directArg = argv.name.toLowerCase();
+					fetch("https://pokeapi.co/api/v2/pokemon/" + directArg)
 						.then(data => data.json())
 						.then((data, err) => {
 							let { id, name, weight, height } = data;
@@ -40,8 +41,8 @@ require("yargs")
 				userChoise.question(
 					"What is the number or name of your pokemon? \n",
 					answer => {
-						let answerLower = answer.toLowerCase()
-						fetch("https://pokeapi.co/api/v2/pokemon/" + answerLower)
+						let questionArg = answer.toLowerCase()
+						fetch("https://pokeapi.co/api/v2/pokemon/" + questionArg)
 							.then(data => data.json())
 							.then((data, err) => {
 								let { id, name, weight, height } = data;
